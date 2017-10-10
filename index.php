@@ -12,7 +12,7 @@
 	add_action( 'ac/column_types', function ( AC_ListScreen $list_screen ) {
 
 		// Use the type: 'post', 'user', 'comment' or 'media'.
-		if ( 'post' === $list_screen->get_group() ) {
+		if ( 'post' === $list_screen->get_meta_type() ) {
 			require_once plugin_dir_path( __FILE__ ) . 'ac-column-assigned_products.php';
 			$list_screen->register_column_type( new AC_Column_Assigned_Products() );
 		}
@@ -22,7 +22,7 @@
 	add_action( 'acp/column_types', function ( AC_ListScreen $list_screen ) {
 
 		// Use the type: 'post', 'user', 'comment' or 'media'.
-		if ( 'post' === $list_screen->get_group() ) {
+		if ( 'post' === $list_screen->get_meta_type() ) {
 			require_once plugin_dir_path( __FILE__ ) . 'ac-column-assigned_products.php';
 			require_once plugin_dir_path( __FILE__ ) . 'acp-column-assigned_products.php';
 			$list_screen->register_column_type( new ACP_Column_Assigned_Products );
