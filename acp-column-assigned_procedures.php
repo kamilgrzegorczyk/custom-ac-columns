@@ -16,7 +16,7 @@
 		public function get_filtering_vars( $vars ) {
 
 			add_filter( 'posts_where', function ( $where ) {
-				$where = str_replace( "meta_key = 'kg_order_items_%", "meta_key LIKE 'kg_order_items_%", $where );
+				$where = str_replace( "meta_key = 'kg_order_items_", "meta_key LIKE 'kg_order_items_", $where );
 
 				return $where;
 			} );
